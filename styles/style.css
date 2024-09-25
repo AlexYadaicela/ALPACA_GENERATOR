@@ -1,5 +1,7 @@
-canvas{
-    border: 1px solid red; 
-    width: 250px; 
-    height: 300px;
+.img_container > *{
+    display: none; 
+}
+
+body{
+    background-color: maroon;
 }
