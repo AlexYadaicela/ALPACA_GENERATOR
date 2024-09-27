@@ -83,16 +83,13 @@ const loadImages = () => {
     imgElement.forEach((image) => {
         image.onload = () =>{
             ctx.drawImage(image, 0, 0, canvas.width, canvas.height); 
-
-            if(loadedImage == imgElement.length){
-                const link = document.createElement("a"); 
-                link.download = "alpaca-image.png";
-                link.href = canvas.toDataURL(); 
-                link.click(); 
-            }
-
-            console.log(loadedImage);
             loadedImage++; 
+        }
+        if(loadedImage == imgElement.length){
+            const link = document.createElement("a"); 
+            link.download = "alpaca-image.png";
+            link.href = canvas.toDataURL(); 
+            link.click(); 
         }
         image.onerror = () =>{
             console.error("image failed to laod", image.src); 
