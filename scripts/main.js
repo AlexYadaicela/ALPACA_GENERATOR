@@ -79,18 +79,10 @@ const loadImages = () => {
     canvas.width = 300; 
     canvas.height = 400; 
 
-    let loadedImage = 1; 
     imgElement.forEach((image) => {
         image.onload = () =>{
             ctx.drawImage(image, 0, 0, canvas.width, canvas.height); 
-            loadedImage++; 
         }
-        // if(loadedImage == imgElement.length){
-        //     const link = document.createElement("a"); 
-        //     link.download = "alpaca-image.png";
-        //     link.href = canvas.toDataURL(); 
-        //     link.click(); 
-        // }
         image.onerror = () =>{
             console.error("image failed to laod", image.src); 
         }

@@ -3,5 +3,54 @@
 }
 
 body{
-    background-color: maroon;
+    display: grid; 
+    background-color:bisque;
+    place-items: center;
+}
+.wrapper{ 
+    display: grid; 
+    gap: 1rem; 
+}
+
+.img_display{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.customize_option{
+    display: flex; 
+    flex-direction: row;
+    gap: 1rem; 
+}
+
+.customize_option > * {
+    flex: 1 1 0px; 
+    border: 0; 
+    border-radius: 5px;
+}
+
+.customize_option > *:hover{
+    outline: 2px solid black; 
+    opacity: 0.8;
+    background-color: lightblue;
+}
+
+#option_display{
+    display: flex;
+    gap: 10px;  
+}
+
+#option_display > *{
+    border: 0; 
+    border-radius: 5px;
+}
+
+#option_display > *:hover{
+    opacity: 0.7;
+    background-color: grey;
+}
+
+button:hover{
+    cursor: pointer;
 }
